@@ -1,11 +1,21 @@
-import turtle
+# import turtle
+import veryprettytable
+#
+# sally = turtle.Turtle()
+# sally.shape("turtle")
+# sally.color("red")
+#
+# sally.forward(100)
+#
+# my_screen = turtle.Screen()
+# my_screen.bgcolor("teal")
+# my_screen.exitonclick()
 
-sally = turtle.Turtle()
-sally.shape("turtle")
-sally.color("red")
+table = veryprettytable.VeryPrettyTable()
 
-sally.forward(100)
-
-my_screen = turtle.Screen()
-my_screen.bgcolor("teal")
-my_screen.exitonclick()
+table.add_column("City Names", ["Adelaide", "Sydney", "Melbourne", "Darwin", "Perth"])
+table.add_column("City Pokemon", ["Pikachu", "Raichu", "Onix", "Spinarak", "Hoothoot"])
+#table.align = 'l'
+table.align["City Names"] = "l"
+table.align["City Pokemon"] = "r"
+print(table)
